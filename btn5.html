@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        /* border: 3px solid red; */
+        font-size: 50px;
+        padding: 10px 10px;
+        text-decoration: none;
+position: relative;
+color: rgb(113, 113, 20);
+overflow: hidden;
+    }
+    a::before{
+        content: "";
+        background-color: rgb(236, 11, 49);
+        height: 180%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform-origin: bottom left;
+        clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%,0% 100%);
+        transform: translateX(-300px) translateY(-30px);
+transition: all 1s;
+    }
+    a:hover::before{
+        transform: translateX(-100px) translateY(-30px);
+    }
+    a::after{
+        content: "";
+        background-color: rgb(146, 72, 243);
+        height: 180%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform-origin: bottom right;
+        clip-path: polygon(0 1%, 100% 0% ,100% 100% , 0% 100%,32% 50%);
+        transform: translateX(300px) translateY(-30px);
+transition: all 1s;
+    }
+    a:hover::after{
+        transform: translateX(90px) translateY(-30px);
+    }
+ </style>
+</head>
+<body>
+    
+  <a href="#">HOVER !!</a>
+
+</body>
+</html>
