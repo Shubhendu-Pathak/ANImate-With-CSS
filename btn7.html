@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            border: 2px solid red;
+            font-size: 30px;
+            padding: 20px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            background-color: yellowgreen;
+        }
+        a:before{
+            content: "YOYO";
+            color: rgb(235, 242, 224);
+            background-color: blue;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-80px);
+            transition: all 1s;
+        }
+        a:hover:before{
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <a href="#">BUTTON-7</a>
+
+</body>
+</html>
