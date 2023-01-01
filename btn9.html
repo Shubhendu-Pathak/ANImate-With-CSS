@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: grey;
+        }
+        a{
+            font-size: 40px;
+            text-decoration: none;
+            padding: 15px;
+            /* border: 2px solid red; */
+            color: aliceblue;
+            position: relative;
+            overflow: hidden;
+        }
+        a:hover{
+            box-shadow: 0 0 15px 20px white;
+        }
+        a:before{
+            color: black;
+            content: "MESSI🟢";
+            background-color: aqua;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(80px) translateX(250px);
+            transition: all 0.8s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover::before{
+            transform: translateY(0px) translateX(0px);
+        }
+    </style>
+</head>
+<body>
+    <a href="#">HOVER@9</a>
+</body>
+</html>

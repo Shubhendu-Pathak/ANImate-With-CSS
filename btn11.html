@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        a{
+            padding: 20px;
+            font-size: 35px;
+            text-decoration: none;
+            position: relative;
+            color: aqua;
+            overflow: hidden;
+            /* border: 2px solid yellow; */
+
+        }
+        a::before{
+            content: "BOUNCE";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: blueviolet;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-100px);
+            border-radius: 0 0 50% 50%;
+        }
+        a:hover:before{
+            transform: translateY(0);
+            animation: btn 2s;
+        }
+        @keyframes btn{
+            0%{
+                transform: translateY(0);
+            }
+            20%{
+                transform: translateY(-50px);
+            }
+            30%{
+                transform: translateY(0);
+            }
+            40%{
+                transform: translateY(-40px);
+            }
+            50%{
+                transform: translateY(0);
+            }
+            60%{
+                transform: translateY(-30px);
+            }
+            70%{
+                transform: translateY(0);
+            }
+            80%{
+                transform: translateY(-20px);
+            }
+            90%{
+                transform: translateY(-10px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<a href="#">BUTTON-!!</a>
+</body>
+</html>

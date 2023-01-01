@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            overflow: hidden;
+        }
+        a{
+            padding: 20px;
+            font-size: 35px;
+            text-decoration: none;
+            color: aqua;
+            position: relative;
+            overflow: hidden;
+        }
+        a:hover{
+            box-shadow: 0 0 15px 25px aqua;
+        }
+        a:before{
+            content: "MIRAGE";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: yellow;
+            height: 100%;
+            width: 100%;
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(5);
+            opacity: 0;
+            transition: all 1s;
+        }
+        a:hover::before{
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+<a href="#">HELLO </a>
+
+</body>
+</html>
